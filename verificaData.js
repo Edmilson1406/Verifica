@@ -1,30 +1,33 @@
 var dataAtual = new Date() 
 
-var dataUser = new Date("2003-03-12")
+var dataUser = new Date("2012-05-15")
 
-hoje = new Date();
-//console.log(dataUser.getMonth())
+var verificaIdade = verificaIdade(dataUser)
 
-console.log(dataAtual)
-console.log(dataUser)
+console.log(verificao)
+
+
+
+function verificaIdade(dataUser) {
+    var dataAtual = new Date() 
 if ((dataAtual.getFullYear() - dataUser.getFullYear() == 18)) {
     if ((dataUser.getMonth()+1) <= (dataAtual.getMonth()+1)){
         if (dataUser.getDate() <= dataAtual.getDate()) {
-            console.log("Maior de Idade1")
+            return "Maior de Idade"
         }
         else {
-            console.log("Menor de Idade1")
+            return "Menor de Idade"
         }
     }
     else {
-        console.log("Menor de Idade1")
+        return "Menor de Idade"
     }
 }
 else if((dataAtual.getFullYear() - dataUser.getFullYear() > 18)){
-    console.log("Maior de Idade")
+    return "Maior de Idade"
 }
 
 else {
-    console.log("Menor de Idade")
-}
+    return "Menor de Idade"
+}}
 
